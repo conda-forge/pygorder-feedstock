@@ -11,8 +11,12 @@ source:
   sha256: ced91220d95a6812a9e0a9cca5d110a2069a1688528bd86136215a706c13da03
 
 build:
-  number: 0
+  number: 1
   script:
+    - if: match(python, "3.14.*") and unix
+      then: export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
+    - if: match(python, "3.14.*") and win
+      then: set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install ./pygorder -vv
 
