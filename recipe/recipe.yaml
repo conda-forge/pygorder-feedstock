@@ -1,6 +1,6 @@
 context:
   name: pygorder
-  version: "1.2.0"
+  version: "1.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/Ladme/gorder/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 561996113217182ff7d9e2b62679c41cc4b775d670d6b02060964e9e650530cf
+  sha256: 30f99ddead513c13ea01e8163b831e4ed977f49463cc2ec7cd1503a3061e8c29
 
 build:
-  number: 1
+  number: 0
   script:
     - if: match(python, "3.14.*") and unix
       then: export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
