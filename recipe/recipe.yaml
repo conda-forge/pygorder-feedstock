@@ -1,6 +1,6 @@
 context:
   name: pygorder
-  version: "1.4.1"
+  version: "1.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/Ladme/gorder/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 3c88c50c6aeda0c4dc825adc92893cf321325653aeb736bfebf3b804684c0f1f
+  sha256: f32fefc15de91add99a1f5e4229b008d45bebc563e4df05bdcaccf3354128275
 
 build:
   number: 0
